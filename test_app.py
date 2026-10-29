@@ -20,7 +20,7 @@ def test_valid_submission(client):
         "assignment_title": "DevOps Lab Mid",
         "submission_url": "https://github.com/"
     }, follow_redirects=True)
-
+    
     assert response.status_code == 200
     assert b"Afifa Batool" in response.data
     assert b"DevOps Lab Mid" in response.data
